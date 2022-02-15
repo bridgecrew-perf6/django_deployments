@@ -1,0 +1,99 @@
+*{
+	font-family: 'DINMedium';
+}
+body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+h1{
+	color: #03b2d0;
+	margin: 0;
+	font-size: 2.2em;
+	font-weight: 500;
+}
+.coming-soon{
+	position: relative;
+	text-align: center;
+	height: 100vh;
+}
+.coming-soon img{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 300px;
+	opacity: 0;
+	animation: popup 5s;
+	animation-delay: 2s;
+	padding-top: 30px;
+}
+.coming-soon .animation-1{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	animation: popup 5s;
+	animation-delay: 4s;
+	width: 100%;
+	margin-top: 7em;
+}
+.coming-soon .animation-2{
+	position: absolute;
+	bottom: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0;
+	animation: popup 5s;
+	animation-delay: 6s;
+	width: 100%;
+}
+img.animated,
+.coming-soon .animation-1.animated,
+.coming-soon .animation-2.animated{
+	opacity: 1;
+}
+a{
+	color: #222222;
+	text-decoration: none;
+}
+
+@keyframes popup {
+	from {
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+@media only screen and (max-width: 992px){
+	.coming-soon img{
+		width: 70%;
+	}
+	h1{
+		font-size: 1.6em;
+	}
+	.coming-soon .animation-1{
+		margin-top: 4em;
+	}
+	.coming-soon .animation-2{
+		width: 98%;
+	}
+	.coming-soon .animation-2 p{
+		word-wrap: break-word;
+		line-height: 1.11;
+	}
+	.coming-soon .animation-2 p,
+	.coming-soon .animation-2 a{
+		font-size: 1.1em;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.coming-soon .animation-2 p span{
+		display: block;
+	}
+}
